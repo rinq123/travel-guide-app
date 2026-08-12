@@ -20,7 +20,7 @@ This is a build-and-learn roadmap, not a deadline. Complete each milestone by do
 
 - [x] Install the current LTS version of Node.js and confirm `node --version` and `npm --version` work in the terminal. *(Verified 12 August 2026: Node v24.16.0, npm v11.13.0.)*
 - [x] Configure Git with your name/email. *(Verified 12 August 2026.)*
-- [ ] Create a GitHub account and repository for the project.
+- [x] Create a GitHub account and private repository for the project. *(Connected and first commit pushed 12 August 2026.)*
 - [x] Install VS Code extensions for ESLint, Prettier, and Tailwind CSS IntelliSense. *(Installed 12 August 2026.)*
 - [ ] Learn the everyday Git loop: `status`, `add`, `commit`, `push`, and reading diffs.
 
