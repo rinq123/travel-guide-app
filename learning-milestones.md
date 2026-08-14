@@ -22,9 +22,9 @@ This is a build-and-learn roadmap, not a deadline. Complete each milestone by do
 - [x] Configure Git with your name/email. *(Verified 12 August 2026.)*
 - [x] Create a GitHub account and private repository for the project. *(Connected and first commit pushed 12 August 2026.)*
 - [x] Install VS Code extensions for ESLint, Prettier, and Tailwind CSS IntelliSense. *(Installed 12 August 2026.)*
-- [ ] Learn the everyday Git loop: `status`, `add`, `commit`, `push`, and reading diffs.
+- [x] Learn the everyday Git loop: `status`, `add`, `commit`, `push`, and reading diffs. *(Practised 12 August 2026.)*
 
-**Complete when**: [ ] You can make a small text change in a practice repo, commit it, and see it on GitHub.
+**Complete when**: [x] You can make a small text change in a practice repo, commit it, and see it on GitHub.
 
 ## Phase 1 — Start a Next.js project
 
@@ -32,12 +32,12 @@ This is a build-and-learn roadmap, not a deadline. Complete each milestone by do
 
 **Tasks**:
 
-- [ ] Create a new project with `create-next-app`, choosing TypeScript, Tailwind CSS, ESLint, and App Router.
-- [ ] Run the development server, edit the home page, and inspect it in the browser.
-- [ ] Create routes for `/about`, `/guides`, `/destinations`, and `/contact` using folders and `page.tsx` files.
-- [ ] Add a shared navigation and footer through the root layout.
+- [x] Create a new project with `create-next-app`, choosing TypeScript, Tailwind CSS, ESLint, and App Router. *(Created in `web/` on 12 August 2026.)*
+- [x] Run the development server, edit the home page, and inspect it in the browser. *(Verified 12 August 2026.)*
+- [x] Create routes for `/about`, `/guides`, `/destinations`, and `/contact` using folders and `page.tsx` files. *(Verified 12 August 2026.)*
+- [x] Add a shared navigation and footer through the root layout. *(Verified 12 August 2026.)*
 
-**Complete when**: [ ] You can explain why `app/about/page.tsx` becomes the `/about` page and can run `npm run build` without errors.
+**Complete when**: [x] You can explain why `app/about/page.tsx` becomes the `/about` page and can run `npm run build` without errors. *(Completed 12 August 2026.)*
 
 Reference: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started)
 
