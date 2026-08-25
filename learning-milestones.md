@@ -47,12 +47,13 @@ Reference: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started
 
 **Tasks**:
 
-- [ ] Build a mobile-first homepage with a hero, introduction, featured destinations, and enquiry call to action.
-- [ ] Create reusable cards for destinations and guides.
-- [ ] Store initial content in local TypeScript data files; make destination detail pages from that data.
-- [ ] Add proper page titles/descriptions, image alt text, keyboard-friendly navigation, and a responsive menu.
+- [x] Build a mobile-first homepage with a hero, introduction, featured destinations, guide introduction, and enquiry call to action. *(Completed 25 August 2026.)*
+- [x] Create reusable cards for destinations and guides. *(Completed 24 August 2026.)*
+- [x] Store initial content in local TypeScript data files; make destination detail pages from that data. *(Completed 24 August 2026.)*
+- [x] Add page titles/descriptions, keyboard-friendly navigation, and a responsive menu. *(Completed 25 August 2026.)*
+- [ ] Add meaningful image alt text when approved client images are available.
 
-**Complete when**: [ ] The entire site works on a phone-sized screen, every navigation link works, and adding a destination only requires changing the local data file.
+**Complete when**: [x] The entire site works on a phone-sized screen, every navigation link works, and adding a destination only requires changing the local data file. *(Completed 25 August 2026.)*
 
 ## Phase 3 — Design polish and content readiness
 
@@ -106,57 +107,58 @@ Reference: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started
 
 **Complete when**: [ ] The client can visit the live custom domain, edit content, and receive enquiries.
 
-## Phase 7 — Booking discovery, before booking code
+## Phase 7 — Trip-request discovery, before booking code
 
 **Learn**: turning an operational workflow into requirements and designing a data model.
 
 **Tasks**:
 
-- [ ] Draw the exact booking journey: choose guide/service/date/time → request → staff approval → deposit link → payment → confirmation.
-- [ ] Agree the business rules for duration, lead time, deposits, availability, payment deadlines, cancellations, refunds, and no-shows.
-- [ ] Sketch admin screens for guides, services, availability, blackout dates, booking requests, and booking statuses.
+- [ ] Draw the exact journey: choose destination/interests/dates → bespoke trip enquiry → staff review → third-party-provider travel arrangement → guide-service confirmation.
+- [ ] Agree the business rules for trip budget, lead time, guide availability, third-party provider hand-off, customer contract, cancellations, and refunds.
+- [ ] Sketch admin screens for guides, destination expertise, guide availability, trip requests, proposal status, and customer communications.
+- [ ] Confirm in writing whether the business or the third-party provider contracts with the customer and takes each payment; obtain appropriate legal/accounting advice before accepting travel payments.
 - [ ] Write the phase-two scope and price before development begins.
 
-**Complete when**: [ ] The business can run the same workflow manually from the written rules with no unanswered decisions.
+**Complete when**: [ ] The business can run the same workflow manually, including the third-party-provider hand-off, with no unanswered decisions.
 
-## Phase 8 — Booking foundations
+## Phase 8 — Trip-request foundations
 
 **Learn**: relational databases, Supabase, authentication, authorization, and row-level security.
 
 **Tasks**:
 
 - [ ] Create a separate Supabase project owned by the business.
-- [ ] Model guides, services, availability rules, blackout periods, booking requests, and booking statuses.
+- [ ] Model guides, destination expertise, services, availability rules, blackout periods, trip requests, proposal statuses, and customer communications.
 - [ ] Add staff-only authentication and ensure public visitors cannot view or change internal records.
 - [ ] Build a small staff admin area before building the customer calendar.
 
-**Complete when**: [ ] Staff can sign in, manage one guide’s availability, and view booking requests; public users cannot access the admin area.
+**Complete when**: [ ] Staff can sign in, manage one guide’s availability, and view trip requests; public users cannot access the admin area.
 
-## Phase 9 — Availability and booking requests
+## Phase 9 — Guide availability and trip requests
 
 **Learn**: date/time handling, time zones, validation, race conditions, and server-side booking checks.
 
 **Tasks**:
 
-- [ ] Show available private-guide slots based on staff-managed availability and blackout dates.
-- [ ] Let a customer select a guide, service, date, and time and submit a request.
-- [ ] Re-check availability on the server before saving; never trust only the browser calendar.
-- [ ] Give staff approve, decline, and expired statuses.
+- [ ] Let customers submit a destination, dates, group size, interests, and budget as a bespoke trip request.
+- [ ] Let staff check guide availability against staff-managed availability and blackout dates; do not promise live flight or accommodation availability.
+- [ ] Validate and save requests on the server; never trust only browser checks.
+- [ ] Give staff new, reviewing, proposed, confirmed, declined, and closed statuses.
 
-**Complete when**: [ ] A booked or staff-reserved slot cannot be accepted twice, including when two test requests are submitted at almost the same time.
+**Complete when**: [ ] Staff can process a test request through the approved third-party-provider hand-off without exposing internal notes to the customer.
 
-## Phase 10 — Deposits, confirmations, and launch checks
+## Phase 10 — Guide-service payments and launch checks
 
 **Learn**: Stripe Checkout, webhooks, idempotency, payment states, and email notifications.
 
 **Tasks**:
 
-- [ ] On staff approval, create a Stripe Checkout deposit link with booking metadata and an expiry time.
-- [ ] Verify Stripe webhooks server-side; mark a booking confirmed only after a verified successful payment event.
-- [ ] Send customer and staff confirmation emails, with clear next steps.
+- [ ] Only after written legal/business confirmation, create a Stripe deposit link for the guide service alone; do not collect payment for third-party travel services.
+- [ ] Verify Stripe webhooks server-side; mark the guide-service deposit paid only after a verified successful payment event.
+- [ ] Send customer and staff confirmation emails, including clear information about the third-party provider's separate travel arrangements.
 - [ ] Test successful, failed, abandoned, expired, repeated, and delayed webhook cases in Stripe test mode.
 
-**Complete when**: [ ] A test payment produces exactly one confirmed booking and exactly one confirmation message to each recipient.
+**Complete when**: [ ] A test guide-service payment produces exactly one confirmation message to each recipient and never changes the status of third-party travel arrangements.
 
 ## Not in the first booking release
 
@@ -164,6 +166,7 @@ Reference: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started
 - [ ] Google or Outlook calendar synchronisation
 - [ ] Customer accounts
 - [ ] Automated refunds or rescheduling
+- [ ] Third-party-provider API integrations or online checkout for flights/accommodation
 - [ ] Multiple currencies and full-payment checkout
 - [ ] Native mobile apps
 

@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Travel Guide App",
-  description: "Private travel experience and local guides",
+  title: {
+    default: "[Business Name]",
+    template: "%s | [Business Name]",
+  },
+  description: "Bespoke travel experiences with destination specialists.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -25,18 +28,28 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header>
-          <nav aria-label="Main navigation">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/destinations">Destinations</Link>
-            <Link href="/guides">Guides</Link>
-            <Link href="/contact">Contact</Link>
+        <header className="border-b border-slate-200 bg-white">
+          <nav
+            aria-label="Main navigation"
+            className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4"
+          >
+            <Link href="/" className="font-bold text-slate-900">
+              [Business Name]
+            </Link>
+
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-700">
+              <Link href="/about">About</Link>
+              <Link href="/destinations">Destinations</Link>
+              <Link href="/guides">Guides</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
           </nav>
         </header>
         {children}
-        <footer>
-          <p>© 2026 Travel Guide App</p>
+        <footer className="mt-auto bg-slate-900 px-6 py-8 text-slate-300">
+          <div className="mx-auto max-w-6xl">
+            <p>&copy; 2026 [Business Name]</p>
+          </div>
         </footer>
       </body>
     </html>
