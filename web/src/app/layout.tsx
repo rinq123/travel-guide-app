@@ -38,10 +38,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </Link>
 
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-700">
-              <Link href="/about">About</Link>
-              <Link href="/destinations">Destinations</Link>
-              <Link href="/guides">Guides</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/about" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">About</Link>
+              <Link href="/destinations" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Destinations</Link>
+              <Link href="/guides" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Guides</Link>
+              <Link href="/contact" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Contact</Link>
             </div>
           </nav>
         </header>
