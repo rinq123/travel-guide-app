@@ -23,7 +23,7 @@ export default function ContactPage() {
               experience around your interests, timing, and preferred destination.
             </p>
 
-            <div className="mt-10 rounded-lg bg-slate-100 p-6">
+            <div className="mt-10 rounded-lg border border-stone-200 bg-(--surface) p-6 shadow-sm">
               <h2 className="text-xl font-bold text-slate-900">
                 What to include
               </h2>

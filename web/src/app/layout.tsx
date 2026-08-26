@@ -28,25 +28,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="border-b border-slate-200 bg-white">
+        <header className="border-b border-stone-200 bg-(--surface)">
           <nav
             aria-label="Main navigation"
             className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4"
           >
-            <Link href="/" className="font-bold text-slate-900">
+            <Link href="/" className="font-bold tracking-tight text-(--ink)">
               [Business Name]
             </Link>
 
-            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-700">
-              <Link href="/about" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">About</Link>
-              <Link href="/destinations" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Destinations</Link>
-              <Link href="/guides" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Guides</Link>
-              <Link href="/contact" className="rounded-sm transition-colors hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700">Contact</Link>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-(--muted)">
+              <Link href="/about" className="rounded-sm transition-colors hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)">About</Link>
+              <Link href="/destinations" className="rounded-sm transition-colors hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)">Destinations</Link>
+              <Link href="/guides" className="rounded-sm transition-colors hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)">Guides</Link>
+              <Link href="/contact" className="rounded-sm transition-colors hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)">Contact</Link>
             </div>
           </nav>
         </header>
         {children}
-        <footer className="mt-auto bg-slate-900 px-6 py-8 text-slate-300">
+        <footer className="mt-auto bg-(--ink) px-6 py-8 text-(--canvas)">
           <div className="mx-auto max-w-6xl">
             <p>&copy; 2026 [Business Name]</p>
           </div>

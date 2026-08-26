@@ -5,8 +5,22 @@
   --font-mono: var(--font-geist-mono);
 }
 
+:root{
+  --canvas: #f8f4ec;
+  --surface: #fffdf8;
+  --ink: #1f2f2b;
+  --muted: #63706a;
+  --accent: #a85316;
+  --accent-strong: #7c3d11;
+}
+
 body {
-  background: #ffffff;
-  color: #0f172a;
+  background: var(--canvas);
+  color: var(--ink);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection{
+  background: #f4cf9b;
+  color: var(--ink);
 }
