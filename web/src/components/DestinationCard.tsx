@@ -11,7 +11,7 @@ export default function DestinationCard({
 }: DestinationCardProps) {
   return (
     <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold text-amber-700">
+      <p className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
         {destination.duration}
       </p>
       <h3 className="mt-3 text-xl font-bold text-slate-900">
